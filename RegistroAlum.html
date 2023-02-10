@@ -71,7 +71,15 @@
                                         v-model="alumno.telefono" type="text" class="form-control" name="txtTelefonoAlumno" id="txtTelefonoAlumno">
                                 </div>
                             </div>
-                            
+                            <div class="row p-1">
+                                <div class="col-3 col-md-2">
+                                    <label for="txtFechadenacimientoAlumno">FECHA DE NACIMIENTO:</label>
+                                </div>
+                                <div class="col-3 col-md-3">
+                                    <input type="date" name="cumpleanios" value="2013-01-01"
+                                        v-model="alumno.fechadenacimiento" type="text" class="form-control" name="txtFechadenacimientoAlumno" id="txtFechadenacimientoAlumno">
+                                </div>
+                            </div>
                             <div class="row p-1">
                                 <div class="col-3 col-md-2">
                                     <label for="txtSexoAlumno">SEXO:</label>
@@ -119,7 +127,8 @@
                                     <td>{{ alumno.direccion }}</td>
                                     <td>{{ alumno.municipio }}</td>
                                     <td>{{ alumno.departamento }}</td>
-                                    <td>{{ alumno.telefono }}</td>                                    
+                                    <td>{{ alumno.telefono }}</td>
+                                    <td>{{ alumno.fechadenacimiento }}</td>
                                     <td>{{ alumno.sexo }}</td>
                                     <td><button class="btn btn-danger" @click="eliminarAlumno(alumno)">ELIMINAR</button></td>
                                 </tr>
@@ -147,7 +156,8 @@
                         direccion : '',
                         municipio : '',
                         departamento : '',
-                        telefono : '',                        
+                        telefono : '',
+                        fechadenacimiento : '',
                         sexo : '',
                     }
                 }
@@ -183,7 +193,8 @@
                     this.alumno.direccion = '';
                     this.alumno.municipio = '';
                     this.alumno.departamento = '';
-                    this.alumno.telefono = '';                    
+                    this.alumno.telefono = '';
+                    this.alumno.fechadenacimiento = '';
                     this.alumno.sexo = '';
                 },
                 modificarAlumno(alumno){
